@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: rgba(217, 208, 226, 0.468);
+    background-color: rgba(122, 118, 126, 0.267);
 }
 
 main {
@@ -38,4 +38,9 @@ a {
 a:hover {
     text-decoration: underline;
     color: rgb(26, 26, 255);
+}
+
+p {
+    text-align: justify;
+    text-indent: 50px;
 }
