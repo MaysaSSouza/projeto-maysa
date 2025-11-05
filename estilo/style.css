@@ -31,7 +31,7 @@ p {
 }
 /* Formatação de imagens e legendas */
 figure.foto-legenda {
-    border: 8px solid blue;
+    border: 8px solid gray;
     box-shadow: 1px 1px 4px black;
     position: relative;
 }
@@ -55,4 +55,41 @@ figure.foto-legenda figcaption {
 }
 figure.foto-legenda:hover figcaption {
     opacity: 1;
+}
+/*Formatação Menu*/
+nav#Menu {
+    display: block;
+}
+
+nav#Menu ul {
+    list-style: none;
+    text-transform: uppercase;
+    position: absolute;
+    top: -20px;
+    left: 300px;
+}
+nav#Menu li {
+    display: inline-block;
+    background-color: white;
+    padding: 10px;
+    margin: 2px;
+    transition: background-color 1s;
+}
+
+nav#Menu li:hover {
+    background-color: gray;
+}
+
+nav#Menu h1 {
+    display: none;
+}
+
+nav#Menu a {
+    color: black;
+    text-decoration: none;
+
+}
+
+nav#Menu a:hover {
+    color: white;
 }
