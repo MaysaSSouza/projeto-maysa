@@ -54,7 +54,7 @@ top: 60px;
 header#cabecalho {
     border-bottom: 1px rgb(40, 37, 37) solid;
     height: 150px;
-    background: url(../imagem/new_world.png) no-repeat 0px 80px;
+    background: url(../imagem/logo_panda.png) no-repeat 0px 80px;
 }
 header#cabecalho h1 {
     font-family: 'FonteLogo', sans-serif;
@@ -144,6 +144,25 @@ section#corpo {
     float: left;
     border-right: 1px solid #606060;
     padding-right: 15px;
+}
+table#tabelaspec {
+    border: 1px solid #606060;
+    border-spacing: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+table#tabelaspec td {
+    border: 1px solid #606060;
+    padding: 10px;
+}
+table#tabelaspec td.ce {
+    color: white;
+    background-color: #888888;
+}
+
+table#tabelaspec td.cd {
+    color: black;
+    background-color: #c6c6c6;
 }
 
 aside#lateral {
