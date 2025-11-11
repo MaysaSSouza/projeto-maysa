@@ -3,10 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nova forma de imprimir em 3D</title>
-    <link rel="stylesheet" type="text/css" href="estilo/style.css">
-    <link rel="stylesheet" href="/estilo/specs.css">
+    <link rel="stylesheet" href="estilo/style.css"/>
+    <link rel="stylesheet" href="estilo/specs.css"/>
 </head>
 <script language="javascript" src="javascript/funcoes.js"></script>
 
@@ -31,7 +30,8 @@
                             href="fotos.html">Fotos</a></li>
                     <li onmouseover="mudaFoto('imagem/contato.png')" onmouseout="mudaFoto('imagem/especificacoes.png')">
                         <a href="fale_conosco.html">Fale
-                            conosco</a></li>
+                            conosco</a>
+                    </li>
                 </ul>
             </nav>
         </header>
@@ -46,8 +46,13 @@
                 </hgroup>
                 <p>Clique em qualquer área destacada desta imagem para ter mais informações.</p>
                 <section id="conteudo">
-                    <img src="imagem/patas.png" alt="panda Grande">
-                    <iframe src="textos/panda.html" name="janela" id="frame-spec"></iframe>
+                    <img src="imagem/panda_destacado.png" alt="panda marcado" usemap="#meumapa">
+                    <map name="meumapa">
+                    <area shape="circle" coords="190,81,8" href="textos/panda.html#rosto" target="janela">
+                    <area shape="circle" coords="142,190,8" href="textos/panda.html#pata" target="janela">
+                    <area shape="circle" coords="117,237,8" href="textos/panda.html#pelagem" target="janela">
+                    </map>
+                    <iframe src="textos/panda.html" name="janela" id="frame-spec" ></iframe>
                 </section>
         </section>
         <footer id="rodape">
