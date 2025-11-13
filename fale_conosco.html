@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nova forma de imprimir em 3D</title>
     <link rel="stylesheet" type="text/css" href="estilo/style.css">
+    <link rel="stylesheet" href="estilo/form.css">
 </head>
 <script language="javascript" src="javascript/funcoes.js"></script>
 
@@ -23,19 +24,69 @@
                     <li onmouseover="mudaFoto('imagem/home.png')" onmouseout="mudaFoto('imagem/animal_panda_2737.png')">
                         <a href="index.html"> Home</a>
                     </li>
-                    <li onmouseover="mudaFoto('imagem/especificacoes.png')"
-                        onmouseout="mudaFoto('imagem/contato.png')"><a href="specs.html">Especificações</a>
+                    <li onmouseover="mudaFoto('imagem/especificacoes.png')" onmouseout="mudaFoto('imagem/contato.png')">
+                        <a href="specs.html">Especificações</a>
                     </li>
-                    <li onmouseover="mudaFoto('imagem/fotos.png')"
-                        onmouseout="mudaFoto('imagem/contato.png')"><a href="fotos.html">Fotos</a></li>
-                    <li onmouseover="mudaFoto('imagem/contato.png')"
-                        onmouseout="mudaFoto('imagem/contato.png')"><a href="fale_conosco.html">Fale
+                    <li onmouseover="mudaFoto('imagem/fotos.png')" onmouseout="mudaFoto('imagem/contato.png')"><a
+                            href="fotos.html">Fotos</a></li>
+                    <li onmouseover="mudaFoto('imagem/contato.png')" onmouseout="mudaFoto('imagem/contato.png')"><a
+                            href="fale_conosco.html">Fale
                             conosco</a></li>
                 </ul>
             </nav>
         </header>
-        E-mail: Contato3d@outlook.com
-        Telefone: 061 985167543
+        <form method="post" id="fcontato" action="mailto:panda@gmail.com">
+            <fieldset id="usuario">
+                <legend> identificação do usuário</legend>
+                <p><label for="cnome">Nome: </label><input type="text" name="nome" id="cnome" size="20" maxlength="30"
+                        placeholder="Nome Completo"></p>
+                <p><label for="cemail">Email: </label><input type="email" name="email" id="cemail" size="20"
+                        maxlength="20" placeholder="E-mail">
+                </p>
+                <p><label for="csenha">Senha: </label><input type="password" name="senha" id="csenha" size="10"
+                        maxlength="8" placeholder="8 Dígitos"> </p>
+                <fieldset id="sexo">
+                    <legend>Sexo</legend>
+                    <input type="radio" name="tsexo" id="cfem" checked><label for="cfem">Feminino</label>
+                    <br>
+                    <input type="radio" name="tsexo" id="cmasc"><label for="cmasc">Masculino</label>
+                </fieldset>
+                <p><label for="cnasc">Data de nascimento: </label><input type="date" name="datanas" id="cnasc"></p>
+            </fieldset>
+            <fieldset id="endereco">
+                <legend> Endereço do usuário</legend>
+                <p><label for="clogado">Logradouro: </label><input type="text" name="logradouro" id="clogado"
+                        placeholder="Rua, Av."></p>
+                <p><label for="cestad">Estado: </label><select name="estado" id="cestad">
+                        <option>Fortaleza</option>
+                        <option>Minas Gerais</option>
+                        <option>Paraná</option>
+                        <option>Rio de Janeiro</option>
+                        <option>Brasília</option>
+                        <option>São Paulo</option>
+                    </select>
+                </p>
+                <p><label for="cidad">Cidade: </label><input type="text" name="cidad" id="cidad" list="cidade"></p>
+                <datalist id="cidade">
+                    <option value="Rio de Janeiro"></option>
+                    <option value="Nova Iguaçu"></option>
+                    <option value="Niterói"></option>
+                </datalist>
+            </fieldset>
+            <fieldset id="mensagem">
+                <legend>Mensagem do usuário</legend>
+                <p><label for="curge">Grau de urgência: </label><input type="text" name="grau" id="curge"
+                        maxlength="10"></p>
+                <p><label for="cmsg">Mensagem: </label><input type="msg" id="cmsg"></p>
+            </fieldset>
+            <fieldset id="pedido">
+                <legend> Seja um apoiador</legend>
+                <p><label for="cajuda">Quantas vezes gostaria de ajudar:</label><input type="text" name="ajuda"
+                        id="cajuda"></p>
+                <p><label for="cvalor">Valor: </label><input type="text" name="valor" id="cvalor"></p>
+            </fieldset>
+            [botão enviar]
+        </form>
         <footer id="rodape">
             <p>Copyright &copy; by Maysa Souza</p>
             <p>Atualizado em 02/11/2025</p>
