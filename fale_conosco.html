@@ -7,8 +7,15 @@
     <title>Nova forma de imprimir em 3D</title>
     <link rel="stylesheet" type="text/css" href="estilo/style.css">
     <link rel="stylesheet" href="estilo/form.css">
+    <script language="javascript" src="javascript/funcoes.js"></script>
+    <script>
+        function calc_total() {
+            var qtd = parseInt(document.getElementById('cqtd').value);
+            tot = qtd * 10;
+            document.getElementById('cvalor').value = tot;
+        }
+    </script>
 </head>
-<script language="javascript" src="javascript/funcoes.js"></script>
 
 <body>
     <div id="interface">
@@ -35,9 +42,9 @@
                 </ul>
             </nav>
         </header>
-        <form method="post" id="fcontato" action="mailto:panda@gmail.com">
+        <form method="post" id="fcontato" action="mailto:panda@gmail.com" oninput="calc_total();">
             <fieldset id="usuario">
-                <legend> identificação do usuário</legend>
+                <legend>Identificação do usuário</legend>
                 <p><label for="cnome">Nome: </label><input type="text" name="nome" id="cnome" size="20" maxlength="30"
                         placeholder="Nome Completo"></p>
                 <p><label for="cemail">Email: </label><input type="email" name="email" id="cemail" size="20"
@@ -75,17 +82,19 @@
             </fieldset>
             <fieldset id="mensagem">
                 <legend>Mensagem do usuário</legend>
-                <p><label for="curge">Grau de urgência: </label><input type="text" name="grau" id="curge"
-                        maxlength="10"></p>
-                <p><label for="cmsg">Mensagem: </label><input type="msg" id="cmsg"></p>
+                <p><label for="curge">Grau de urgência: </label>Min<input type="range" name="grau" id="curge" min="0"
+                        max="10">Max</p>
+                <p><label for="cmsg">Mensagem: </label><textarea name="msg" id="cmsg" cols="35" rows="5"
+                        placeholder="Deixe aqui sua mensagem"></textarea></p>
             </fieldset>
             <fieldset id="pedido">
                 <legend> Seja um apoiador</legend>
-                <p><label for="cajuda">Quantas vezes gostaria de ajudar:</label><input type="text" name="ajuda"
-                        id="cajuda"></p>
-                <p><label for="cvalor">Valor: </label><input type="text" name="valor" id="cvalor"></p>
+                <p><label for="cajuda">Gostaria de ajudar?</label><input type="checkbox" name="ajuda" id="cajuda"></p>
+                <p><label for="cajuda">Quantas vezes gostaria de ajudar:</label><input type="number" name="qtd" min="0"
+                        max="99" id="cqtd"></p>
+                <p><label for="cvalor">Valor: </label><input type="text" name="valor" id="cvalor" readonly></p>
             </fieldset>
-            [botão enviar]
+            <input type="submit" name="Enviar" class="envia">
         </form>
         <footer id="rodape">
             <p>Copyright &copy; by Maysa Souza</p>
